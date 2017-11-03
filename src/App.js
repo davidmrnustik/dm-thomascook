@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import { Grid } from 'react-bootstrap';
+import { Grid, PageHeader } from 'react-bootstrap';
 import LoadingScreen from './LoadingScreen';
 import Repository from './Repository';
 import { User } from './User';
@@ -79,10 +79,15 @@ class CiklumApp extends Component {
 
     return (
       <div className='CiklumApp'>
+        <Header onSubmitForm={this.submitForm} />
         <Grid>
-          <Header onSubmitForm={this.submitForm} />
           {userName}
           {userRepos}
+        {!user && (
+          <PageHeader>Favourite programming language<br />
+            <small>Search GitHub user by username and explore her/his favourite programming language! Have a fun!!</small>
+          </PageHeader>
+        )}
         </Grid>
       </div>
     );

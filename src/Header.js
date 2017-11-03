@@ -5,7 +5,7 @@ import SearchForm from './SearchForm';
 
 export const Header = (props) => {
   return (
-    <Navbar style={{ marginTop: 15 }}>
+    <Navbar>
       <Navbar.Header>
         <Navbar.Brand>
           <a href='./'>
@@ -14,7 +14,7 @@ export const Header = (props) => {
               alt='Thomas Cook'
               style={{
                 width: 'auto',
-                height: '110%',
+                height: 25,
                 marginTop: 4
               }}
             />
@@ -23,7 +23,7 @@ export const Header = (props) => {
         <Navbar.Toggle />
       </Navbar.Header>
       <Navbar.Collapse>
-        <Navbar.Form pullLeft>
+        <Navbar.Form pullRight>
          <SearchForm onSubmitForm={props.onSubmitForm} />
         </Navbar.Form>
       </Navbar.Collapse>
